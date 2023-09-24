@@ -2,7 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import { nanoid } from 'nanoid';
 
-const contactsPath = path.resolve('db/contacts.json');
+const contactsPath = path.resolve('db','contacts.json');
+console.log(contactsPath);
 
 export const listContacts = async() => {
   return JSON.parse(await fs.readFile(contactsPath))
